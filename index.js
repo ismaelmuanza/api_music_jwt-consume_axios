@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const MusicController = require('./music/MusicController')
+const MusicController = require('./src/music/MusicController')
 
 // cors
 app.use(cors())
