@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Consumindo Api_books</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Acessando como usuário</h3>
+        <div class="form-group">
+            <input type="text" name="email" id="email" placeholder="E-mail" class="form-control">
+            <input type="password" name="password" id="password" placeholder="Cantor/a" class="form-control">
+            <button class="btn btn-success" onclick="authUser()">Entrar</button>
+        </div>
+        <hr>
+        <h3>Listando Músicas</h3>
+        <div id="showMusics"></div>
+        <hr>
+        <h3>Música</h3>
+        <div id="showMusic"></div>
+        <hr>
+        <h3>Adicionando uma nova Música</h3>
+        <h5 id="addSuccess"></h5>
+        <div class="form-group">
+            <input type="number" name="id" id="id" placeholder="ID" class="form-control">
+            <input type="text" name="title" id="title" placeholder="Título" class="form-control">
+            <input type="number" name="year" id="year" placeholder="Ano" class="form-control">
+            <input type="text" name="singer" id="singer" placeholder="Cantor/a" class="form-control">
+            <button id="btnAdd" class="btn btn-success" onclick="createMusic()">Adicionar</button>
+        </div>
+        <div id="createMusic"></div>
+        <hr>
+        <h3>Editando uma Música</h3>
+        <h5 id="editSuccess"></h5>
+        <div class="form-group">
+            <input type="text" name="editId" id="editId" placeholder="ID" class="form-control" readonly>
+            <input type="text" name="editTitle" id="editTitle" placeholder="Título" class="form-control">
+            <input type="text" name="editYear" id="editYear" placeholder="Ano" class="form-control">
+            <input type="text" name="editSinger" id="editSinger" placeholder="Cantor/a" class="form-control">
+            <button id="btnUpdate" class="btn btn-warning">Atualizar</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/axios.min.js"></script>
+<script src="./js/index.js"></script>
